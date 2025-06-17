@@ -29,6 +29,10 @@ app.get("/api/test", (req, res) => {
   res.json({ message: "API is working" });
 });
 
+app.get("/", (req, res) => {
+  res.send("Jivhala Motors API is running...");
+});
+
 // API Routes
 app.use("/api/auth", authRoutes);             // Auth routes (login/register)
 app.use("/api/vehicles", vehicleRoutes);      // Vehicle CRUD routes
